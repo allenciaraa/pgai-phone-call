@@ -14,11 +14,23 @@ from pipecat.pipeline.worker import PipelineWorker
 from pipecat.workers.runner import WorkerRunner
 from pipecat.observers.base_observer import BaseObserver
 from pipecat.services.cartesia.tts import CartesiaTTSService
+from pipecat.frames.frames import TTSSpeakFrame
+from pipecat.frames.frames import TranscriptionFrame
+from pipecat.services.deepgram.stt import DeepgramSTTService
 
 load_dotenv()
 PUBLIC_SERVER_URL = os.environ["PUBLIC_SERVER_URL"]
 TWILIO_ACCOUNT_SID = os.environ["TWILIO_ACCOUNT_SID"]
 TWILIO_AUTH_TOKEN = os.environ["TWILIO_AUTH_TOKEN"]
+
+class TranscriptLogger(BaseObserver):
+    def __init__(self, stt_processor):
+        super().__init__()
+        self.stt_processor = stt_processor
+
+    async def on_push_frame(self, data):
+        if isinstance(data.frame, TranscriptionFrame) and data.source is self.stt_processor:
+            print(f"HEARD: {data.frame.text}", flush=True)
 
 app = FastAPI()
 
@@ -39,8 +51,8 @@ async def media_stream(websocket: WebSocket):
     await websocket.accept()
 
     start_data = websocket.iter_text()
-    await start_data.__anext__() # 'connected' message, throw it out
-    call_data = await start_data.__anext__() # 'start' message, keep for IDs
+    await start_data.__anext__()  # 'connected' message, discard
+    call_data = await start_data.__anext__()  # 'start' message, keep for IDs
 
     call_data = json.loads(call_data)
     stream_sid = call_data["start"]["streamSid"]
@@ -68,38 +80,39 @@ async def media_stream(websocket: WebSocket):
         voice_id="f786b574-daa5-4673-aa0c-cbe3e8534c02",
     )
 
+    stt = DeepgramSTTService(
+        api_key=os.environ["DEEPGRAM_API_KEY"],
+    )
+
     pipeline = Pipeline([
         transport.input(),
+        stt,
         tts,
         transport.output(),
     ])
 
-    class FrameLogger(BaseObserver):
-        async def on_push_frame(self, data):
-            print(f"FRAME: {type(data.frame).__name__}", flush=True)
-
-    worker = PipelineWorker(pipeline, enable_rtvi=False, observers=[FrameLogger()])
+    worker = PipelineWorker(pipeline, enable_rtvi=False, observers=[TranscriptLogger(stt)])
     runner = WorkerRunner()
-
-    @worker.event_handler("on_pipeline_finished")
-    async def on_pipeline_finished(worker, frame):
-        print(f"Pipeline finished. Frame type: {type(frame).__name__}")
-
-    @worker.event_handler("on_pipeline_error")
-    async def on_pipeline_error(worker, frame):
-        print(f"Pipeline ERROR: {frame}")
 
     @worker.event_handler("on_pipeline_started")
     async def on_pipeline_started(worker, frame):
-        from pipecat.frames.frames import TTSSpeakFrame
-        await worker.queue_frame(TTSSpeakFrame(text="Hello, this is a test of the output audio."))
+        await worker.queue_frame(
+            TTSSpeakFrame(text="Hello, this is a test of the output audio.")
+        )
 
+    @worker.event_handler("on_pipeline_finished")
+    async def on_pipeline_finished(worker, frame):
+        print(f"Call ended: {call_sid}")
+
+    @worker.event_handler("on_pipeline_error")
+    async def on_pipeline_error(worker, frame):
+        print(f"Pipeline error on call {call_sid}: {frame}")
 
     try:
         await runner.run(worker)
     except Exception as e:
         import traceback
-        print(f"Pipeline crashed: {e}")
+        print(f"Pipeline crashed on call {call_sid}: {e}")
         traceback.print_exc()
 
 @app.get("/")
