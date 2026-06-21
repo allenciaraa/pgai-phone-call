@@ -1,8 +1,10 @@
 import os
 import json
 import httpx
+import asyncio
 from fastapi import FastAPI
 from fastapi import WebSocket
+from fastapi import Request
 from fastapi.responses import Response
 from dotenv import load_dotenv
 from pipecat.serializers.twilio import TwilioFrameSerializer
@@ -15,36 +17,58 @@ from pipecat.pipeline.worker import PipelineWorker, PipelineParams
 from pipecat.workers.runner import WorkerRunner
 from pipecat.observers.base_observer import BaseObserver
 from pipecat.services.cartesia.tts import CartesiaTTSService
-from pipecat.frames.frames import TTSSpeakFrame
-from pipecat.frames.frames import TranscriptionFrame
-from pipecat.frames.frames import TextFrame
 from pipecat.services.deepgram.stt import DeepgramSTTService
 from pipecat.services.anthropic.llm import AnthropicLLMService
 from pipecat.processors.aggregators.llm_context import LLMContext
 from pipecat.processors.aggregators.llm_response_universal import LLMContextAggregatorPair
+from pipecat.frames.frames import (
+    TranscriptionFrame,
+    TextFrame,
+    LLMFullResponseStartFrame,
+    LLMFullResponseEndFrame,
+)
 
 load_dotenv()
 PUBLIC_SERVER_URL = os.environ["PUBLIC_SERVER_URL"]
 TWILIO_ACCOUNT_SID = os.environ["TWILIO_ACCOUNT_SID"]
 TWILIO_AUTH_TOKEN = os.environ["TWILIO_AUTH_TOKEN"]
 
-class TranscriptLogger(BaseObserver):
-    def __init__(self, stt_processor):
+class TranscriptSaver(BaseObserver):
+    def __init__(self, stt_processor, llm_processor, call_sid):
         super().__init__()
         self.stt_processor = stt_processor
+        self.llm_processor = llm_processor
+        self.call_sid = call_sid
+        self.lines = []
+        self._bot_buffer = ""
 
     async def on_push_frame(self, data):
         if isinstance(data.frame, TranscriptionFrame) and data.source is self.stt_processor:
-            print(f"HEARD: {data.frame.text}", flush=True)
+            self.lines.append(f"Caller: {data.frame.text}")
+        elif data.source is self.llm_processor:
+            if isinstance(data.frame, LLMFullResponseStartFrame):
+                self._bot_buffer = ""
+            elif isinstance(data.frame, TextFrame):
+                self._bot_buffer += data.frame.text
+            elif isinstance(data.frame, LLMFullResponseEndFrame):
+                if self._bot_buffer:
+                    self.lines.append(f"Bot: {self._bot_buffer}")
+                self._bot_buffer = ""
 
-class ResponseLogger(BaseObserver):
-    def __init__(self, llm_processor):
-        super().__init__()
-        self.llm_processor = llm_processor
+    def save(self):
+        os.makedirs("calls/transcripts", exist_ok=True)
+        filepath = f"calls/transcripts/{self.call_sid}.txt"
+        with open(filepath, "w") as f:
+            f.write("\n".join(self.lines))
+        print(f"Saved transcript: {filepath}", flush=True)
 
-    async def on_push_frame(self, data):
-        if isinstance(data.frame, TextFrame) and data.source is self.llm_processor:
-            print(f"LLM SAID: {data.frame.text}", flush=True)
+MAX_CALL_SECONDS = int(os.environ.get("MAX_CALL_SECONDS", 240))
+
+async def enforce_max_duration(worker, call_sid):
+    await asyncio.sleep(MAX_CALL_SECONDS)
+    print(f"Call {call_sid} hit max duration ({MAX_CALL_SECONDS}s), forcing end", flush=True)
+    await worker.cancel()
+
 
 app = FastAPI()
 
@@ -124,20 +148,33 @@ async def media_stream(websocket: WebSocket):
         assistant_aggregator,
     ])
 
+    transcript_saver = TranscriptSaver(stt, llm, call_sid)
+
     worker = PipelineWorker(
         pipeline,
         enable_rtvi=False,
-        params=PipelineParams(
-            audio_in_sample_rate=8000,
-            audio_out_sample_rate=8000,
-        ),
-        observers=[TranscriptLogger(stt), ResponseLogger(llm)],
+        params=PipelineParams(audio_in_sample_rate=8000, audio_out_sample_rate=8000),
+        observers=[transcript_saver],
     )
     runner = WorkerRunner()
 
+    timeout_task = asyncio.create_task(enforce_max_duration(worker, call_sid))
+
+
+    @transport.event_handler("on_client_disconnected")
+    async def on_client_disconnected(transport, client):
+        print(f"Client disconnected for call {call_sid}", flush=True)
+        await worker.cancel()
+
     @worker.event_handler("on_pipeline_finished")
     async def on_pipeline_finished(worker, frame):
-        print(f"Call ended: {call_sid}")
+        print(f"Call ended: {call_sid}", flush=True)
+        try:
+            transcript_saver.save()
+        except Exception as e:
+            import traceback
+            print(f"Transcript save failed: {e}", flush=True)
+            traceback.print_exc()
 
     @worker.event_handler("on_pipeline_error")
     async def on_pipeline_error(worker, frame):
@@ -145,10 +182,43 @@ async def media_stream(websocket: WebSocket):
 
     try:
         await runner.run(worker)
+        print(f"runner.run() returned normally for {call_sid}", flush=True)
     except Exception as e:
         import traceback
         print(f"Pipeline crashed on call {call_sid}: {e}")
         traceback.print_exc()
+    finally:
+        timeout_task.cancel()
+        transcript_saver.save()
+        print(f"Call ended: {call_sid}", flush=True)
+
+@app.post("/recording-status")
+async def recording_status(request: Request):
+    form = await request.form()
+    print(f"Recording callback received: {dict(form)}", flush=True)
+
+    recording_url = form.get("RecordingUrl")
+    call_sid = form.get("CallSid")
+
+    if not recording_url:
+        print("No RecordingUrl in callback, skipping download", flush=True)
+        return {"status": "ignored"}
+    
+    mp3_url = f"{recording_url}.mp3"
+
+    async with httpx.AsyncClient() as client:
+        response = await client.get(
+            mp3_url,
+            auth=(TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN),
+        )
+
+    os.makedirs("calls/recordings", exist_ok=True)
+    filepath = f"calls/recordings/{call_sid}.mp3"
+    with open(filepath, "wb") as f:
+        f.write(response.content)
+
+    print(f"Saved recording: {filepath}", flush=True)
+    return {"status": "saved"}
 
 @app.get("/")
 async def test():

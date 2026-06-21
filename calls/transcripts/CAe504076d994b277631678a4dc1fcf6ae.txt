@@ -1,0 +1,11 @@
+Caller: Hi.
+Bot: Hi there! How can I help you today?
+Caller: How far away is the moon?
+Bot: The moon is about 238,855 miles, or roughly 384,400 kilometers away from Earth on average. Is there anything else you'd like to know?
+Caller: How far away is that in feet?
+Bot: That's about 1.26 billion feet away! Pretty mind-boggling, right?
+Caller: Yeah. Totally.
+Bot: It really puts things in perspective! Is there anything else I can help you with?
+Caller: Nope.
+Caller: Bye.
+Bot: Al

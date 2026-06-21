@@ -1,0 +1,9 @@
+Caller: Hi. How are you?
+Bot: I'm doing great
+Bot: , thanks for asking! How are you doing today?
+Caller: I'm doing well.
+Bot: That
+Bot: 's great to hear! Is there something I can help you with today?
+Caller: No. Thanks.
+Bot: No
+Bot:  problem at all! Have a wonderful day, feel free to call anytime!

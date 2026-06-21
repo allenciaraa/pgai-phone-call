@@ -1,0 +1,14 @@
+Caller: Hello?
+Bot: Hello! How can I help you today
+Bot: ?
+Caller: Can you tell me what movies are playing at my local theater?
+Bot: I'm sorry
+Bot: , I don't have access to real-time information like local theater listings. I'd suggest checking a
+Bot:  site like Fandango or Google for current showtimes near you
+Bot: !
+Caller: Okay. Thank you.
+Bot: You're welcome! Have
+Bot:  a great time at the movies if you go! Goodbye!
+Caller: Goodbye.
+Bot: Bye
+Bot: ! Take care!

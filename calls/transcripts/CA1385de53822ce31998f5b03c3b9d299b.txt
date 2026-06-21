@@ -1,0 +1,6 @@
+Caller: Hello?
+Bot: Hello! How can I help you today
+Bot: ?
+Caller: Bye.
+Bot: Bye
+Bot: ! Have a great day!
