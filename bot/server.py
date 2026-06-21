@@ -27,6 +27,7 @@ from pipecat.frames.frames import (
     LLMFullResponseStartFrame,
     LLMFullResponseEndFrame,
 )
+from bot.scenarios import SCENARIOS_BY_NAME
 
 load_dotenv()
 PUBLIC_SERVER_URL = os.environ["PUBLIC_SERVER_URL"]
@@ -73,12 +74,14 @@ async def enforce_max_duration(worker, call_sid):
 app = FastAPI()
 
 @app.post("/voice")
-async def voice():
+async def voice(scenario: str = "schedule_appointment"):
     stream_url = PUBLIC_SERVER_URL.replace("https://", "wss://")
     twiml = f"""<?xml version="1.0" encoding="UTF-8"?>
         <Response>
             <Connect>
-                <Stream url="{stream_url}/media-stream" />
+                <Stream url="{stream_url}/media-stream">
+                    <Parameter name="scenario" value="{scenario}" />
+                </Stream>
             </Connect>
         </Response>
     """
@@ -93,8 +96,14 @@ async def media_stream(websocket: WebSocket):
     call_data = await start_data.__anext__()  # 'start' message, keep for IDs
 
     call_data = json.loads(call_data)
+    print(f"!!!!! FULL START EVENT: {call_data['start']} !!!!!", flush=True)
+
     stream_sid = call_data["start"]["streamSid"]
     call_sid = call_data["start"]["callSid"]
+    custom_params = call_data["start"].get("customParameters", {})
+    scenario_name = custom_params.get("scenario", "schedule_appointment")
+    active_scenario = SCENARIOS_BY_NAME.get(scenario_name, SCENARIOS_BY_NAME["schedule_appointment"])
+    print(f"Using scenario: {active_scenario['name']}", flush=True)
 
     serializer = TwilioFrameSerializer(
         stream_sid=stream_sid,
@@ -127,11 +136,13 @@ async def media_stream(websocket: WebSocket):
         voice_id="f786b574-daa5-4673-aa0c-cbe3e8534c02",
     )
 
+    print(f"!!!!! BUILDING CONTEXT WITH SCENARIO: {active_scenario['name']} !!!!!", flush=True)
+
     context = LLMContext(
         messages=[
             {
                 "role": "system",
-                "content": "You are a helpful assistant having a phone conversation. Keep responses brief, 1-2 sentences.",
+                "content": active_scenario["system_prompt"],
             }
         ]
     )
@@ -168,13 +179,7 @@ async def media_stream(websocket: WebSocket):
 
     @worker.event_handler("on_pipeline_finished")
     async def on_pipeline_finished(worker, frame):
-        print(f"Call ended: {call_sid}", flush=True)
-        try:
-            transcript_saver.save()
-        except Exception as e:
-            import traceback
-            print(f"Transcript save failed: {e}", flush=True)
-            traceback.print_exc()
+        print(f"Pipeline finished for call {call_sid} (frame: {type(frame).__name__})", flush=True)
 
     @worker.event_handler("on_pipeline_error")
     async def on_pipeline_error(worker, frame):

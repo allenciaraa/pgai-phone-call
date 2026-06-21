@@ -1,0 +1,10 @@
+Caller: Hello?
+Bot: Hi, yeah, I'm calling to cancel an appointment I have next Tuesday?
+Caller: Okay. Great. What name?
+Bot: Robert Kim.
+Caller: Robert Kim. Okay. I will let the doctor know.
+Bot: Oh, and I don't need to reschedule either — I'm feeling better, so I won't be needing the appointment at all.
+Caller: Perfect. I'll pass on that information.
+Bot: Great, thanks so much. Bye!
+Caller: Bye.
+Bot: *hangs up*

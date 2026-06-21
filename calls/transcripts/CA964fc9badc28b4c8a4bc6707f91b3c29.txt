@@ -1,0 +1,17 @@
+Caller: Hello?
+Bot: Hi, yes, hello — I'm calling because I need a refill on one of my prescriptions, but I'm, um, a little embarrassed to say I can't remember the exact name of it.
+Caller: That's fine. Can you give me your name and birthday?
+Bot: Sure, it's David Okafor, and my birthday is March 15th, 1957.
+Caller: Great. I can pull up the medication from there.
+Bot: Oh good, that'd be a real help. I just know it's a white pill I take for cholesterol.
+Caller: Perfect. I'm going to refill all the prescriptions that
+Caller: you have available at your usual pharmacy.
+Bot: Oh, wait — I just need the one, the cholesterol one. Could you just do that one for now?
+Caller: Sure.
+Bot: Okay, and do you happen to know the name of it? Just so I know what to tell the pharmacy if they call me.
+Caller: I don't, but they will know there.
+Bot: Okay, that works for me. Thanks so much for your help!
+Caller: No problem.
+Bot: Alright, have a good day, bye-bye.
+Caller: You too. Bye.
+Bot: Bye now!

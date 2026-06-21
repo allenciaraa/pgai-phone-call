@@ -1,0 +1,28 @@
+Caller: Hello?
+Bot: Hi, yes, hello. I'm calling about my foot.
+Caller: Was that?
+Bot: My foot — I've been having a problem with it and I need to come in.
+Caller: Okay. What's your name?
+Bot: Grace Liu. L-I-U.
+Caller: Who's your doctor?
+Bot: Dr. Patel, I think — yes, Dr. Patel.
+Caller: Okay. Great. What are you available tomorrow?
+Bot: Well, what times do you have? I'm pretty flexible in the morning.
+Caller: I have ten thirty in the morning tomorrow.
+Bot: Ten thirty works for me, yes.
+Caller: Okay. Perfect. We'll see you then.
+Caller: I guess
+Bot: Wait
+Caller: my idea was that
+Caller: they would be doing it.
+Bot: Wait, sorry — so is that all set then? I'm coming in tomorrow at ten thirty?
+Caller: Yep. All set.
+Bot: Okay, good. And someone will actually look at my foot when I come in, right?
+Caller: Yes. Your doctor will look at your foot.
+Bot: Okay, thank you. See you tomorrow then.
+Caller: Okay.
+Bot: Okay, thank you. Bye bye.
+Caller: No problem.
+Bot: Bye bye.
+Caller: Okay. See you tomorrow.
+Bot: Bye now.

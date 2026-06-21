@@ -1,0 +1,10 @@
+Caller: Hello?
+Bot: Hi, yeah, this is Kevin O'Brien calling. Um, I had kind of a random question — do you guys happen to know any good lawyers in the area?
+Caller: No. I'm sorry. We don't do that here.
+Bot: Oh yeah, no, that makes sense — it's not really a medical thing. I figured it was a long shot.
+Caller: Outside?
+Bot: Oh, sorry — yeah, I figured it was kind of a long shot. Do you know if there's anyone there who might have a recommendation, or is that just totally outside what you guys do?
+Caller: It's totally outside of what we do.
+Bot: Okay, fair enough. Thanks anyway, I appreciate it. Have a good one, bye!
+Caller: You too. Bye.
+Bot: Bye!

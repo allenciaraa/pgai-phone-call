@@ -1,8 +1,0 @@
-Caller: Hi.
-Bot: Hi there! How can I help you today?
-Caller: What is the meaning of life
-Bot: That's a big question! Many philosophers and thinkers have debated it, but a common answer is that life's meaning comes from the connections, experiences, and purpose you create for yourself.
-Caller: Thank you.
-Bot: You're welcome! Feel free to call anytime if you have more questions. Have a great day!
-Caller: You too.
-Bot: Thanks, bye!

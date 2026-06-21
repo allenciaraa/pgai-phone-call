@@ -1,0 +1,20 @@
+Caller: Hello?
+Bot: Hi, yes, is this the doctor's office?
+Caller: Yes. It is.
+Bot: Oh good. I'm calling to get a refill on my blood pressure medication — lisinopril. I'm almost out.
+Caller: Okay. Great. What's your doctor's name?
+Bot: Dr. — um, my doctor is Dr. Patel. Sarah Patel.
+Caller: K. Perfect.
+Caller: I will put in that order for you.
+Bot: Oh, that was quick! Do you need my name or date of birth or anything?
+Caller: Yes. Can I get your name and date of birth?
+Bot: Sure, it's Angela Torres, and my birthday is March 15th, 1972.
+Caller: Okay. Great. We have you in the system.
+Bot: Great. And will it go to my pharmacy automatically, or do I need to do anything on my end?
+Caller: It will go automatically if it's the same pharmacy that you've been using.
+Bot: Perfect, yeah, same pharmacy. Thanks so much, I appreciate it!
+Caller: Thank you.
+Bot: Alright, have a good day, bye!
+Caller: You too.
+Caller: Bye.
+Bot: Bye!

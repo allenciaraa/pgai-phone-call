@@ -1,0 +1,10 @@
+Caller: Hello?
+Bot: Hi, yeah, is this the office? I just had a quick question about your Saturday hours.
+Caller: Sure.
+Caller: What's your question?
+Bot: Do you guys open on Saturdays, and if so what time?
+Caller: Yes. We do. At nine AM to five PM.
+Bot: Oh perfect, that's exactly what I needed. Thanks so much, bye!
+Caller: No problem.
+Caller: Bye.
+Bot: Bye!
