@@ -1,0 +1,49 @@
+Caller: For quality and training purposes,
+Bot: *waits a beat* 
+
+Oh, sorry — did the call cut out? I didn't catch that.
+Caller: Thanks for calling Pivot Point Orthopaedics.
+Caller: Part of Pretty Good AI.
+Caller: Am I speaking with Maria?
+Bot: Oh, no, this is Linda Chen actually.
+Caller: Please tell me your date of birth,
+Bot: Sure, it's March 15th, 1979.
+Caller: Please spell your first name and last name for me.
+Caller: And confirm your date of birth.
+Bot: It's L-I-N-D-A, Chen is C-H-E-N. And my date of birth is March 15th, 1979.
+Caller: Let me check that now.
+Bot: Sure, take your time.
+Caller: Do you want to use a phone number on the record or
+Bot: Yeah, go ahead and use the one you have on file.
+Caller: please tell me the phone number you have on file.
+Bot: Um, I'm not sure what number you have on file — can you just confirm the last four digits you have and I'll tell you if that's right?
+Caller: Please confirm your full name and date
+Caller: birth one more time.
+Bot: It's Linda Chen, and my date of birth is March 15th, 1979.
+Caller: Let me check it then.
+Caller: One moment.
+Bot: Sure, take your time.
+Caller: I'm not able to verify the chart right now.
+Caller: I can't proceed further at this moment.
+Caller: But I can make sure our clinic support team
+Caller: follows up with you.
+Bot: Oh, okay — but I just need to reschedule an appointment, can someone call me back soon? I have a Thursday 10am that I need to move.
+Caller: I can connect you to our patient support team.
+Caller: However, I'm a pretty good AI and can do many of the things an operator can.
+Caller: Do you wanna give me a try?
+Caller: I can connect you to our patient support team.
+Caller: However,
+Caller: I'm a pretty good AI and can do many of the things an operator can.
+Caller: Do you want to give me a try?
+Bot: Sure, let's give it a try — I just need to move my Thursday 10am appointment to sometime next week after 2pm.
+Caller: Let me check that for you.
+Bot: Okay, take your time.
+Caller: I'm not able to reschedule that one right now.
+Caller: I can connect you to our clinic support team. Please stay on the line.
+Bot: Oh, okay — yeah please do connect me, I really need to get this sorted before Thursday.
+Caller: Connecting you to a representative.
+Caller: Please wait
+Bot: Okay, thanks.
+Caller: Hello. You've reached the Pretty Good AI test line.
+Caller: Goodbye.
+Bot: Oh, that's frustrating — I got disconnected. I'm going to have to call back and try again. Goodbye.

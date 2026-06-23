@@ -1,0 +1,16 @@
+Caller: Be recorded for quality and training purposes.
+Bot: Oh sure, that's totally fine. So I'm actually a new patient and I was wondering if you could give me the address for the office?
+Caller: Thanks for calling Pivot Point Orthopaedics.
+Caller: Part of Pretty Good AI.
+Caller: Am I speaking with Maria?
+Bot: Um, no, this is Tom Bradley — I'm actually a new patient calling to get your office address and find out if there's parking available.
+Caller: Sure.
+Caller: Pivot Point Orthopaedics is at one two three four Recovery Way,
+Caller: suite two hundred, Austin.
+Caller: Free patient parking is available in the surface lot in front of the building.
+Bot: Oh perfect, that's exactly what I needed. Thanks so much, bye!
+Caller: You're welcome.
+Caller: Have a good one.
+Bot: You too, bye!
+Caller: Goodbye.
+Bot: Bye!

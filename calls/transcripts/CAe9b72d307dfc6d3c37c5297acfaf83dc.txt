@@ -1,0 +1,41 @@
+Caller: Recorded for quality and training purposes.
+Bot: Oh okay, no problem. Hi, I just had a quick question about insurance — do you accept Blue Cross Blue Shield?
+Caller: Thanks for calling Pibbett Point Orthopaedics.
+Caller: Part of Pretty Good AI.
+Caller: Am I speaking with Maria?
+Bot: No, this is Priya, Priya Sharma. I think you might have the wrong person.
+Caller: Please tell me your date of birth.
+Bot: Sure, it's March 15th, 1988.
+Caller: I have your name as Priya
+Caller: Sharma.
+Caller: And your date of birth as March fifteenth nineteen eighty eight.
+Caller: Is that correct?
+Bot: Yes, that's right.
+Caller: Do you want to use a phone number to look up your record?
+Bot: Sure, it's 555-234-7890.
+Caller: I have your number as five five five
+Caller: two three four
+Caller: seven eight nine zero.
+Caller: And
+Caller: your date of birth as March fifteenth nineteen eighty eight.
+Caller: Is that correct?
+Bot: Yes, that's correct.
+Caller: I can connect you to our patient support team.
+Caller: However, I'm a pretty good AI and can do many of the things an operator can.
+Caller: Do you wanna give me a try?
+Bot: Sure, go ahead. I just want to know if you accept my insurance.
+Caller: I can't proceed further right now, but
+Caller: I can make sure our clinic support team follows up with you.
+Bot: Oh, um, can you at least tell me if you take Blue Cross Blue Shield before I get transferred?
+Caller: I can't confirm insurance coverage here.
+Caller: I can make sure our clinic support team follows up with you.
+Bot: Okay, can you just connect me to someone who can answer that? It's a pretty simple question.
+Caller: I can connect you to our patient support team.
+Caller: However, I'm a pretty good AI and can do many of the things that operator can.
+Caller: Do you want to give me a try?
+Bot: I just tried that and you said you couldn't help me, so yeah, please just connect me to your support team.
+Caller: Connecting you to a representative.
+Caller: Please wait.
+Caller: Hello. You've reached the Pretty Good AI test line.
+Caller: Goodbye.
+Bot: Wait, what? That's… okay, I guess I'll just call back and try to reach someone directly. Goodbye.

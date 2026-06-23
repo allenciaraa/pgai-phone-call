@@ -1,0 +1,31 @@
+Caller: Recorded for quality and training purposes.
+Bot: Hey there, thanks for holding. This is the medical office, how can I help you today?
+Caller: Thanks for calling Pivot Point Orthopaedics.
+Caller: Part of Pretty Good AI.
+Caller: Am I speaking with Maria?
+Bot: Oh, no, this is Kevin — Kevin O'Brien. I'm actually a patient there.
+Caller: Please tell me your full name and date of birth.
+Bot: Sure, it's Kevin O'Brien, and my date of birth is March 15th, 1985.
+Caller: I have your name as Kevin O'Brien and your date of birth as March
+Caller: fifteenth nineteen eighty five.
+Caller: Please confirm your last name spelling.
+Bot: Yeah, it's O-B-R-I-E-N.
+Caller: Do you want to use a phone number to look up your record?
+Caller: If so,
+Caller: tell me the number on file. If not, I can confirm your
+Caller: first name, last name, and date of birth one more time.
+Bot: Sure, the number on file should be 617-555-0142.
+Caller: I have your number as six one seven
+Caller: five five five
+Caller: zero one four two.
+Caller: And your date of birth as March fifteenth nineteen eighty five.
+Caller: Please confirm those two details.
+Bot: Yeah, that's correct.
+Caller: Something's not right.
+Caller: I can't proceed further right now, but I can make sure our clinic support team follows up with you.
+Bot: Oh, okay. But actually, my question isn't really a medical thing — I was wondering if your office could recommend a good lawyer for a personal matter?
+Caller: That's not something we offer.
+Bot: Yeah, I figured as much. Thanks anyway, I'll look elsewhere. Have a good one!
+Caller: You too.
+Caller: Take care.
+Bot: Thanks, bye!

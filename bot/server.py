@@ -158,7 +158,6 @@ async def media_stream(websocket: WebSocket):
         transport.output(),
         assistant_aggregator,
     ])
-
     transcript_saver = TranscriptSaver(stt, llm, call_sid)
 
     worker = PipelineWorker(

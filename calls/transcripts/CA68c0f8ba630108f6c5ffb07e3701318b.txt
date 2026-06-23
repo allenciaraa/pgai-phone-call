@@ -1,0 +1,14 @@
+Caller: Be recorded for quality and training purposes.
+Bot: Oh, okay, that's fine. Hi, I'm calling because I need a refill on one of my prescriptions but I'm — I'm blanking on the name of it.
+Caller: Thanks for calling Pivot Point Orthopaedics.
+Caller: Part of Pretty Good AI,
+Caller: Am I speaking with Maria?
+Bot: Oh — no, I think I've got the wrong number. I'm trying to reach my doctor's office.
+Caller: No problem. If you want, I can help with basic
+Caller: clinic info for Pivot Point Orthopedics.
+Bot: No, that's alright, I need to talk to someone about a prescription refill. I must've dialed the wrong number, sorry about that.
+Caller: No worries.
+Caller: That's not something I can help with on this line.
+Bot: Okay, thanks anyway. I'll try to find the right number. Bye now.
+Caller: Goodbye.
+Bot: Bye!

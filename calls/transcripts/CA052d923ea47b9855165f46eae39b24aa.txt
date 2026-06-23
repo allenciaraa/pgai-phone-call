@@ -1,9 +1,0 @@
-Caller: Hello?
-Bot: Hi there, thanks for calling. How can I help you today?
-Caller: I'm sorry. What's your name?
-Bot: Oh, I'm sorry about that! I'm the scheduling assistant here. How can I help you today?
-Caller: What?
-Caller: No. You're not.
-Bot: I'm sorry, I'm the virtual scheduling assistant for the clinic. Can I help you with something today?
-Caller: No. You are a patient.
-Bot: I'm sorry, I think there might be some confusion. I'm the scheduling assistant here at the clinic — I'm here to help you make appointments or answer questions. What can I do for you today?

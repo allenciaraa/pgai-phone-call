@@ -1,0 +1,36 @@
+Caller: Call may be recorded for quality and training purposes.
+Bot: Oh okay, that's fine. Hi, I'm calling to schedule a new patient appointment?
+Caller: Thanks for calling Pivot Point Orthopaedics.
+Caller: Are the pretty good AI.
+Caller: Am I speaking with Maria?
+Bot: Um, yeah, this is Maria Gonzalez. I'm calling to schedule a new patient appointment?
+Caller: I need your date of birth.
+Caller: I need your date of birth.
+Bot: Sure, it's March 15th, 1990.
+Caller: I have your name as Maria Gonzales and your date of birth as March
+Caller: fifteenth nineteen ninety.
+Caller: Is that correct?
+Bot: It's Gonzalez, with a Z at the end, but yeah, the date of birth is correct.
+Caller: You want to use a phone number to look up your record?
+Caller: If so,
+Caller: tell me the number you have on file.
+Bot: I'm actually a new patient, so I don't think I'd have a record on file yet.
+Caller: Something's not right.
+Bot: Oh, um, okay — is there something I can help clarify? I'm just trying to set up a new patient appointment.
+Caller: Yes.
+Caller: I can help with that.
+Caller: We have openings this week and early next week.
+Caller: Do you have a preferred
+Caller: day or time of day?
+Bot: Yeah, afternoons work best for me. Do you have anything in the afternoon, maybe later this week or early next week?
+Caller: I can connect you to our patient support team.
+Caller: However, I'm a pretty good AI,
+Caller: and can do many of the things an operator can.
+Caller: Do you wanna give me a try?
+Bot: Sure, yeah, let's give it a try!
+Caller: Connecting you to a representative.
+Caller: Please wait.
+Caller: Hello.
+Caller: You've reached the Pretty Good AI test line.
+Caller: Goodbye.
+Bot: Oh wait, I thought we were just going to schedule the appointment directly? Can someone help me set up a new patient visit?

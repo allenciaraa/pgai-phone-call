@@ -1,0 +1,28 @@
+Caller: Be recorded for quality and training purposes.
+Bot: Oh, okay, no problem with that.
+Caller: Thanks for calling Pivot Point Orthopaedics.
+Caller: Part of Pretty Good AI.
+Caller: Am I speaking with Maria?
+Bot: No, it's Robert — Robert Kim.
+Caller: Please tell me your date of birth.
+Bot: Sure, it's March 15th, 1995.
+Caller: Please tell me your full name and date of birth.
+Bot: Robert Kim, March 15th, 1995.
+Caller: I have Robert Kim.
+Caller: March fifteenth nineteen ninety five.
+Caller: Is that correct?
+Bot: Yeah, that's right.
+Caller: Do you want to use a phone number to look up your record?
+Bot: Sure, it's 847-555-0192.
+Caller: I have your number as eight four seven
+Caller: five five
+Caller: five
+Caller: zero one nine two, and your date of birth as March
+Caller: fifteenth nineteen ninety five.
+Caller: Is that correct?
+Bot: Yes, that's correct.
+Caller: Connecting you to a representative.
+Caller: Please wait.
+Caller: Hello. You've reached the Pretty Good AI test line.
+Caller: Goodbye.
+Bot: Wait — I didn't get to do what I called about. I need to cancel an appointment.

@@ -1,0 +1,12 @@
+Caller: May be recorded for quality and training purposes.
+Bot: Hi, thanks for calling! How can I help you today?
+Caller: Thanks for calling Pivot Point Orthopaedics.
+Caller: Part of Pretty Good AI. Am I speaking with Maria?
+Bot: No, this is Sophia. I just had a quick question — do you guys have Saturday hours, and if so, what time do you open?
+Caller: We are open Monday through Friday only.
+Caller: If you need help with anything else, I can take care of that.
+Bot: Oh okay, what time do you open on Mondays then?
+Caller: We open at nine AM on Mondays.
+Bot: Perfect, thanks so much! Have a good one, bye!
+Caller: You too. Bye.
+Bot: *hangs up*

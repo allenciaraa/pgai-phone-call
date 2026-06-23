@@ -1,0 +1,34 @@
+Caller: Recorded for quality and training purposes.
+Bot: Hi, yes, I'm calling to get a refill on my blood pressure medication. My name is Angela Torres.
+Caller: Thanks for calling Pivot Point Orthopaedics.
+Caller: Part of Pretty Good AI.
+Caller: Am I speaking with Maria?
+Bot: No, this is Angela Torres. I think I might have the wrong number — I'm trying to reach my doctor's office to refill a prescription.
+Caller: Please tell me your date of birth.
+Caller: Please tell me your date of birth.
+Bot: Um, it's March 15th, 1972. But can you tell me what office I've reached? I'm not sure I called the right place.
+Caller: Me check your identity first.
+Bot: Okay, sure, go ahead.
+Caller: Please spell your first and last name for me.
+Bot: Sure, it's A-N-G-E-L-A T-O-R-R-E-S. But again, I'm trying to reach my doctor for a blood pressure medication refill — is this the right place for that?
+Caller: One moment.
+Bot: Sure, I'll hold.
+Caller: Do you want to use a phone number to look up your record?
+Bot: Sure, it's 555-348-2291.
+Caller: Let me check that phone number.
+Bot: Okay, take your time.
+Caller: I have your number as five five five
+Caller: three four eight
+Caller: two two nine one.
+Caller: And your date of birth is March fifteenth nineteen seventy two.
+Caller: Is that correct?
+Bot: Yes, that's correct.
+Caller: Connecting you to a representative.
+Caller: Please wait.
+Bot: Okay, thank you.
+Caller: Hello.
+Caller: You've reached the Pretty Good AI test line.
+Caller: Goodbye.
+Bot: Wait — that's it? I still need my lisinopril refilled. Hello?
+
+Okay, I guess I need to call back. That was frustrating.

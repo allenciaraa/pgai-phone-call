@@ -1,0 +1,31 @@
+Caller: For quality and training purposes.
+Bot: Hello, thank you for calling Riverside Medical. This is Jamie speaking, how can I help you today?
+Caller: Thanks for calling Pivot Point Orthopaedics.
+Caller: Part of Pretty Good AI.
+Caller: Am I speaking with Maria?
+Bot: No, this is Grace. Grace Liu.
+Caller: Please tell me your date of birth.
+Bot: It's March 15th, 1953.
+Caller: Please tell me your full name,
+Caller: first and last, and your date of birth.
+Bot: Grace Liu, and March 15th, 1953. I just said that.
+Caller: I have Grace Lou.
+Caller: March fifteenth nineteen fifty three,
+Caller: Is that correct?
+Bot: It's Liu, L-I-U, not Lou.
+Caller: Do you want to use a phone number to look up your record?
+Caller: If so,
+Caller: tell me the number on file.
+Bot: Sure, it's 614-555-0182.
+Caller: I have your number as six one four
+Caller: five five five zero one eight two
+Caller: and your date of birth as March fifteenth
+Caller: nineteen fifty three.
+Caller: Is that correct?
+Bot: Yes, that's right.
+Caller: Connecting you to a representative.
+Caller: Please wait.
+Bot: Okay
+Caller: Hello. You've reached the Pretty Good AI test line.
+Caller: Goodbye.
+Bot: Wait — hello? I was calling about my foot. Did I get disconnected or something?

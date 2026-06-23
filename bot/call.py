@@ -11,7 +11,7 @@ TWILIO_AUTH_TOKEN = os.environ["TWILIO_AUTH_TOKEN"]
 TWILIO_PHONE_NUM = os.environ["TWILIO_PHONE_NUM"]
 PUBLIC_SERVER_URL = os.environ["PUBLIC_SERVER_URL"]
 
-TARGET_NUM = "+19518162016"
+TARGET_NUM = "+18054398008"
 
 SCENARIO_NAME = sys.argv[1] if len(sys.argv) > 1 else "schedule_appointment"
 

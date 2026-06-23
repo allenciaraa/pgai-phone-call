@@ -1,0 +1,50 @@
+Caller: Recorded for quality and training purposes.
+Bot: Oh, okay, no problem. Hi, I'm calling to schedule a follow-up appointment with my doctor?
+Caller: Thanks for calling Pivot Point Orthopaedics.
+Caller: Part of Pretty Good AI.
+Caller: Am I speaking with Maria?
+Bot: No, this is James Patterson. I'm calling to schedule a follow-up appointment with my doctor.
+Caller: Please tell me your date of birth.
+Bot: Sure, it's March 15th, 1966.
+Caller: Hi. Your name is James Patterson, and your date of birth is March
+Caller: nineteen sixty six.
+Caller: Is that correct?
+Bot: Almost — it's March 15th, 1966. You might've missed the day there.
+Caller: I have your date of birth as March fifteenth nineteen sixty six.
+Caller: Is that correct?
+Bot: Yes, that's correct.
+Caller: The birthday does not match our records, but for demo purposes, I will accept it.
+Caller: I can help with scheduling now.
+Bot: Oh, okay, a little odd but glad we can move forward. I just need to schedule a routine follow-up sometime in the next month.
+Caller: I see this is a follow-up visit.
+Caller: Would you like to book the same type of appointment today?
+Bot: Yeah, that sounds right, go ahead.
+Caller: Let me check for follow-up openings.
+Bot: Sure, take your time.
+Caller: We have openings on Monday with doc
+Bot: Sorry, it cut off there — which doctor and what times are available on Monday?
+Caller: we have one at eleven AM on Monday with doctor Dugi Hauser.
+Caller: Would you like me to book that?
+Bot: Sure, that works for me. Which Monday is that?
+Caller: That's Monday, June twenty second.
+Caller: If that works, I can book it now.
+Bot: Yeah, June 22nd at 11 AM works fine. Go ahead and book it.
+Caller: Booking the Monday,
+Bot: Okay, sounds good.
+Caller: slot now.
+Bot: Sounds good, thanks.
+Caller: You're booked for Monday, June
+Bot: Great, thanks.
+Caller: Please note your appointment
+Bot: Sure, go ahead.
+Caller: I'm sorry.
+Caller: But something isn't right.
+Bot: Oh — what do you mean? Is there a problem with the booking?
+Caller: I can't confirm it from here right now.
+Caller: I'll make sure our clinic support team follows up with you as soon as possible.
+Bot: Okay, a little frustrating but I understand. Can you give me a number I can call to follow up myself if I don't hear back?
+Caller: I can't provide that here.
+Caller: I'll make sure our clinic support team follows up with you as soon as possible.
+Bot: Alright, well I hope someone reaches out soon. Thanks for your help, goodbye.
+Caller: Goodbye.
+Bot: Thanks, bye.

@@ -1,0 +1,51 @@
+Caller: Recorded for quality and training purposes.
+Bot: Yeah, okay, that's fine. Hi, I need to schedule an appointment — can we make this quick?
+Caller: Thanks for calling Pivot Point Orthopaedics.
+Caller: Part of Pretty Good AI.
+Caller: Am I speaking with Maria?
+Bot: No, this is Marcus. Marcus Webb. I'm calling to schedule an appointment.
+Caller: Please tell me your full name and date of birth.
+Bot: Marcus Webb, date of birth July 14th, 1980.
+Caller: I have your name as Marcus Webb.
+Caller: And your date of birth as July fourteenth nineteen eighty.
+Caller: Is that correct?
+Bot: Yes, that's correct. Can we go ahead and get something scheduled?
+Caller: Do you want to use a phone number to look up your record?
+Bot: Sure, it's 555-312-4987.
+Caller: I have your number as five five five
+Caller: three one two
+Caller: four nine eight seven.
+Caller: You and your date of birth is July fourteenth nineteen eighty.
+Caller: Is that correct?
+Bot: Yes, that's all correct. So can we get an appointment booked?
+Caller: One moment.
+Bot: Sure, but I am in a bit of a rush so if we could make this quick, I'd appreciate it.
+Caller: I'm checking the schedule now.
+Bot: Okay, thanks.
+Caller: Are you still there?
+Bot: Yeah, I'm here. Just waiting.
+Caller: One moment.
+Bot: Okay.
+Caller: Are you still there?
+Bot: Yes, still here.
+Caller: I'm here.
+Caller: Please hold for just a moment.
+Bot: Okay, but can we try to move this along? I'm kind of short on time today.
+Caller: I'm still working on it.
+Caller: Please hold on a moment.
+Bot: Alright, sure.
+Caller: Are you still there?
+Bot: Yes, still here.
+Caller: One moment.
+Bot: Okay, I really need to get this done soon — is there anything I can help speed this up?
+Caller: I'm working on it now.
+Caller: Please hold on.
+Bot: Alright, I'll hold.
+Caller: Please stay on the line.
+Bot: I'm here, I'm here.
+Caller: One moment.
+Bot: You know what, I've been holding for a while now — is there someone else I can speak with, or can I call back when the system's working better?
+Caller: I'm sorry about the wait.
+Caller: If you'd like to speak with someone live,
+Caller: I can transfer you now.
+Bot: Yes please, let's do that.
