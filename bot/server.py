@@ -96,7 +96,6 @@ async def media_stream(websocket: WebSocket):
     call_data = await start_data.__anext__()  # 'start' message, keep for IDs
 
     call_data = json.loads(call_data)
-    print(f"!!!!! FULL START EVENT: {call_data['start']} !!!!!", flush=True)
 
     stream_sid = call_data["start"]["streamSid"]
     call_sid = call_data["start"]["callSid"]
@@ -135,8 +134,6 @@ async def media_stream(websocket: WebSocket):
         api_key=os.environ["CARTESIA_API_KEY"],
         voice_id="f786b574-daa5-4673-aa0c-cbe3e8534c02",
     )
-
-    print(f"!!!!! BUILDING CONTEXT WITH SCENARIO: {active_scenario['name']} !!!!!", flush=True)
 
     context = LLMContext(
         messages=[

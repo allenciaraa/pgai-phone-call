@@ -6,6 +6,8 @@ import os
 from dotenv import load_dotenv
 from twilio.rest import Client
 
+load_dotenv()
+
 TWILIO_ACCOUNT_SID = os.environ["TWILIO_ACCOUNT_SID"]
 TWILIO_AUTH_TOKEN = os.environ["TWILIO_AUTH_TOKEN"]
 client = Client(TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN)
